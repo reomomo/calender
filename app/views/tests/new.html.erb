@@ -1,0 +1,7 @@
+<%= form_with model: @test do |f| %>
+  <%= f.text_field :title %>
+  <%= f.hidden_field :testdate, value: @date %>
+  <%= f.submit "push" %>
+<% end %>
+
+<%= format_date(@date.to_date) %>

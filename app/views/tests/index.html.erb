@@ -1,0 +1,9 @@
+<%= month_calendar do |date| %>
+  <%= link_to "new", new_test_path(testdate: date) %>
+  <% today = Test.find_by(testdate: date) %>
+  <% if today %>
+    <%= link_to "show", test_path(today.id) %>
+    <%= format_date(date) %>
+    <%= date.day %>
+  <% end %>
+<% end %>

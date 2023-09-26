@@ -1,0 +1,7 @@
+<%= @test.title %>
+<%= @test.testdate %>
+<%= format_date(@test.testdate) %>
+
+<% if @nextday %>
+  <%= link_to "next", test_path(@nextday.id) %>
+<% end %>
